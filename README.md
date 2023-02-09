@@ -27,6 +27,31 @@ To make an API to fetch latest videos sorted in reverse chronological order of t
 
 - Clone the project to your desktop
 - Go to client and server directory and run  **npm install** to install all the dependencies for frontend and backend.
+- Update the mongodb URL with your local mongodb URL
 - Run the backend and frontend by running **npm start** in separate terminals
+
+## How to test the APIs
+
+- The frontend will launch at PORT 3000 and backend at port 9000
+- Wait few secs for cronjob to populate the data in mongoDB server
+
+    ### Testing the backend APIS
+    
+    - For searching a particular keyword based in title and description , we have to create an index on both.This can be achieved by following command in mongodb shell (db.videos.createIndex( { "title": "text", "description": "text" } ))
+    -  For searching any particular video based on title or description - Make a GET request to (http://localhost:9000/search?q={query}). This is give all the videos matching the keyword.
+    -  For getting all the videos saved in the database in a paginated response sorted in descending order ofpublished datetime - Make a GET request to (http://localhost:9000/paginated-videos?page={pageNum}&limit={Limit}) to get the particular page videos and corresponding data.
+    -  For getting the video based on videoid - Make a GET request to (http://localhost:9000/video/:videoid). This will return the json data for the video and its corresponding youtube URL.
+    
+    ### Testing the frontend
+    
+    - The server would launch (http://localhost:3000/) which is the search page. It internally calls the search API based on title and description.
+    - User can view all the saved videos by clicking on (View all videos) button on the search page which redirects the user to (http://localhost:3000/paginated-videos). User can now choose the page number and limit per page to view the video for the particular page sorted according to descending order of published datetime. NOTEL: The product of given page and limit should not exceed the total video in the database.
+    - By default clicking the load button will load the videos currently present in the database.
+
+
+
+
+
+
 
 
