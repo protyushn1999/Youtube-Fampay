@@ -26,6 +26,7 @@ const port = process.env.PORT || 9000;
 const maxResults = 20;
 const searchQueryArray = ["cricket","football","MSD","world cup","technology","official","DSA","kohli","messi","ronaldo","song","wwe","t series","espn","bollywood","songs","spanish","india","mr beast","pewdiepie","music","fortnite"]
 const publishedAfter = "1990-01-01T00:00:00Z";
+/* update these 4 keys with your youtube api key */
 const YOUTUBE_API_KEY =["AIzaSyA_-rPZs3awM5ZjZB2m8u02ctOgclC3a40","AIzaSyBhjipO7d7TjFkE-JiqbYZ9NQgoIf0p5hA","AIzaSyDEfnt0fzwZdjQ80QjELJTbNIQMGV-pu6M","AIzaSyD1m9hE9yLgNwe3w6puKXNxKZXQ_ODe4aU"];
 
 /* APP ROUTING */
