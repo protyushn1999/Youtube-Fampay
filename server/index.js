@@ -63,13 +63,13 @@ const fetchData = async () => {
   publishedAfter +
   "&location=40.7128,74.0060&locationRadius=1000km";
 
-  const response = await fetch(url);
+  var response = await fetch(url);
 
   /* until and unless a success response is found this will change the API Key fetch for data */
 
   while(response.status !== 200){
 
-    API_KEY = YOUTUBE_API_KEY[Math.floor(Math.random() * YOUTUBE_API_KEY.length)];
+    var API_KEY = YOUTUBE_API_KEY[Math.floor(Math.random() * YOUTUBE_API_KEY.length)];
 
     url =
     "https://youtube.googleapis.com/youtube/v3/search?key=" +
