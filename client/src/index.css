@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Syloti+Nagri&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syncopate:wght@400;700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
+
+:root {
+  --font-title: "Syncopate", sans-serif;
+  --font-base: "Poppins","Ubuntu", sans-serif;
+  --font-accent: "Noto Sans Syloti Nagri", sans-serif;
+  --font-mono: "Ubuntu Mono","Space Mono",monospace;
+  --black-color: #030303;
+  --lightGray-color: #e4e4e4;
+  --gray-color: #6b7688;
+  --brown-color: #46364a;
+  --white-color: #ffffff;
+  --secondary-color: #691aff;
+  --accent-color: #ff0d00;
+  --primary-color: #161b22;
+  --sidebar-color: #0d1116;
+
+
+}
+/* html{
+  font-size: 16px;
+} */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  background: var(--sidebar-color);
+}
+body{
+  margin: 0;
+}

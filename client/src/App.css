@@ -1,0 +1,163 @@
+.app{
+  font-family: var(--font-base);
+  background-color: var(--sidebar-color);
+  width: 100%;
+  height: 100vh;
+}
+.logo{
+  text-align: center;
+  color: var(--accent-color);
+}
+.logo h1{
+  margin-top: 0.5em;
+  font-family: var(--font-base);
+}
+.logo a{
+  color: var(--accent-color);
+}
+.form-group{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+}
+
+.form-group form{
+  width: 60%;
+  margin-top: 1em;
+}
+.form:hover{
+  background: var(--secondary-color);
+}
+.form-group input{
+  width: 100%;
+  height: 2em;
+  border-radius: 40px;
+  outline: none;
+  padding: 1.2em;
+  font-size: 1em;
+  border:2px solid var(--accent-color);
+  color: var(--gray-color);
+}
+.videos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1em;
+}
+.video{
+  color: white;
+  font-size: 1em;
+  width: 30%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-evenly;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 1em;
+  padding: 0.5em;
+  border: 1px solid var(--gray-color);
+  border-radius: 20px;
+}
+.video img{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.video img:hover{
+  opacity: 0.7;
+}
+.video-title{
+  width: 50%;
+}
+.paginated{
+  text-align: center;
+  margin: 0.5em;
+  padding: 6px 12px;
+  border: 1px solid var(--accent-color);
+  width: 20%;
+  margin: 1em auto;
+  text-decoration: none;
+  color: white;
+  border-radius: 10px;
+  background: var(--accent-color);
+  cursor: pointer;
+}
+.paginated:hover{
+  background: var(--primary-color);
+}
+a{
+  text-decoration: none;
+  color: var(--lightGray-color);
+  background: transparent;
+}
+.content{
+  color: var(--gray-color);
+  width: 70%;
+  text-align: justify;
+  margin: auto;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.paginated-view{
+  display: flex;
+  color: var(--gray-color);
+  font-family: var(--font-base);
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  flex-direction: column;
+}
+.pagelimitform{
+  align-items: center;
+  margin: auto;
+  flex-direction: column;
+  width: 100%;
+}
+.paginated-view input{
+  border-radius: 10px;
+  outline: none;
+  padding: 12px 6px;
+  font-size: 1em;
+  border:2px solid var(--accent-color);
+  color: black;
+  background: white;
+  margin: 0.5em;
+  width: 30%;
+}
+.videos-pagination{
+  width: fit-content;
+  margin: auto;
+  padding: 0.5em;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.loading p{
+  text-align: center;
+  color: var(--gray-color);
+  font-size: 1.5em;
+  font-family: var(--font-base);
+}
+.load-btn{
+  width: 15%;
+  height: 50%;
+  padding: 12px 6px;
+  font-size: 1.2em;
+}
+.header p{
+  width: 50%;
+  margin: auto;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.dis-flex{
+  display: flex;
+  justify-content: center;
+}
