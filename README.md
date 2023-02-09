@@ -25,6 +25,8 @@ To make an API to fetch latest videos sorted in reverse chronological order of t
 
 ## How to run the project
 
-- clone the project to your desktop
-- go to client and server directory and run <mark> npm install </mark> to install all the dependencies for frontend and backend
+- Clone the project to your desktop
+- Go to client and server directory and run  **npm install** to install all the dependencies for frontend and backend.
+- Run the backend and frontend by running **npm start** in separate terminals
+
 
