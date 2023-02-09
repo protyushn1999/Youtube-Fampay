@@ -23,6 +23,9 @@ To make an API to fetch latest videos sorted in reverse chronological order of t
     - To fetch the latest videos you need to specify these: type=video, order=date, publishedAfter=<SOME_DATE_TIME>
     - Without publishedAfter, it will give you cached results which will be too old
 
+## Brief Description of the Project
+The project is build with NodeJs, Express and Mongo DB as Backend and React in the frontend. I have created APIs which can fetch most reccent videos from youtube and show the user in a paginated way sorted in descending order of published datetime. The cron job will getch data every 10 secs from Youtube Db and save in our db. Additionally, it will store information about videos, including their ID, publication date, channel ID, title, description, thumbnails, and channel title with proper indexes. Further, I have used compound indexing to optimise the searching of videos using a particular keyword. When the API_KEY quota is used up, it automatically switches to the 4 other keys until success response.
+
 ## How to run the project
 
 - Clone the project to your desktop
@@ -41,6 +44,7 @@ To make an API to fetch latest videos sorted in reverse chronological order of t
     -  For searching any particular video based on title or description - Make a GET request to (http://localhost:9000/search?q={query}). This is give all the videos matching the keyword.
     -  For getting all the videos saved in the database in a paginated response sorted in descending order ofpublished datetime - Make a GET request to (http://localhost:9000/paginated-videos?page={pageNum}&limit={Limit}) to get the particular page videos and corresponding data.
     -  For getting the video based on videoid - Make a GET request to (http://localhost:9000/video/:videoid). This will return the json data for the video and its corresponding youtube URL.
+    -  For getting all the videos - Make a GET request to (http:localhost:9000/all-videos). It will return all the videos along with count in JSON format.
     
     ### Testing the frontend
     
@@ -49,9 +53,4 @@ To make an API to fetch latest videos sorted in reverse chronological order of t
     - By default clicking the load button will load the videos currently present in the database.
 
 
-
-
-
-
-
-
+Note :  Please restart a server if any unnecessary errors occurred.
