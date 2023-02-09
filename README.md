@@ -38,7 +38,7 @@ The project is build with NodeJs, Express and Mongo DB as Backend and React in t
 - The frontend will launch at PORT 3000 and backend at port 9000
 - Wait few secs for cronjob to populate the data in mongoDB server
 
-    ### Testing the backend APIS
+    ### Testing the backend APIs (You can use POSTMAN for the same)
     
     - For searching a particular keyword based in title and description , we have to create an index on both.This can be achieved by following command in mongodb shell (db.videos.createIndex( { "title": "text", "description": "text" } ))
     -  For searching any particular video based on title or description - Make a GET request to (http://localhost:9000/search?q={query}). This is give all the videos matching the keyword.

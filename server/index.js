@@ -34,6 +34,7 @@ const YOUTUBE_API_KEY =["AIzaSyA_-rPZs3awM5ZjZB2m8u02ctOgclC3a40","AIzaSyBhjipO7
     /video/:videoid - get video by id
     /search?q={query} - search video by title or description
     /paginated-videos?page={pageNum}&limit={Limit} - get paginated videos
+    /all-videos - get all videos with total count of videos
     / - home page
 */
 
@@ -148,6 +149,13 @@ app.get("/video/:videoid", (req, res) => {
 All the rows that matches the search query will be returned */
 
 app.get("/search", async (req, res) => {
+
+  /* search query 
+  NOTE: It is important to create index on title and description field in the database as text.
+  it can be done by this command in mongodb shell db.videos.createIndex( { "title": "text", "description": "text" } ) or 
+  directly creating compound index in mongo db compass.
+  */
+
   const searchQuery = req.query.q;
   const query = { $text: { $search: searchQuery } };
   const result = await Video.find(query);
